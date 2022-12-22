@@ -22,5 +22,10 @@ class MarketProvider with ChangeNotifier {
     markets = temp;
     isLoading = false;
     notifyListeners();
+
+    Timer(const Duration(seconds: 3), () {
+      fetchData();
+      print("Data Updated");
+    });
   }
 }

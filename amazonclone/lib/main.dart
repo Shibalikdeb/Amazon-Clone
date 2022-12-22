@@ -3,6 +3,8 @@ import 'package:amazonclone/providers/market_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'constants/Themes.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
