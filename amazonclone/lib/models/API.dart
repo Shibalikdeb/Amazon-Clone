@@ -5,7 +5,7 @@ import 'dart:developer';
 import 'package:http/http.dart' as http;
 
 class API {
-  static getMarkets() async {
+  getMarkets() async {
     try {
       Uri requestPath = Uri.parse(
           "https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=20&page=1&sparkline=false");

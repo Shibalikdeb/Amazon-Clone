@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:amazonclone/models/API.dart';
 import 'package:amazonclone/models/cryptocurrency.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,8 +12,8 @@ class MarketProvider with ChangeNotifier {
     fetchData();
   }
 
-  void fetchData() async {
-    List<dynamic> _markets = await API.getMarkets();
+  Future<void> fetchData() async {
+    List<dynamic> _markets = await API().getMarkets();
 
     List<Cryptocurrency> temp = [];
     for (var market in _markets) {
@@ -27,5 +29,11 @@ class MarketProvider with ChangeNotifier {
       fetchData();
       print("Data Updated");
     });
+  }
+
+  Cryptocurrency fetchCryptoById(String id) {
+    Cryptocurrency crypto =
+        markets.where((element) => element.id == id).toList()[0];
+    return crypto;
   }
 }
