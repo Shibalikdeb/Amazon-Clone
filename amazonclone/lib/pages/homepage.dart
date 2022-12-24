@@ -3,8 +3,7 @@ import 'package:amazonclone/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../models/cryptocurrency.dart';
-import 'detailspage.dart';
+import 'markets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
