@@ -16,8 +16,8 @@ class API {
       log(decodedResponse.toString());
       List<dynamic> markets = decodedResponse as List<dynamic>;
       return markets;
-    } catch (e) {
-      log(e.toString());
+    } catch (ex) {
+      log(ex.toString());
     }
   }
 }
